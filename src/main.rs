@@ -26,7 +26,7 @@ Options:
   -u, --user  Assign the user name.
   -h, --help  Show this screen.");
 
-fn ask(user: &str, ask: &str) {
+fn ask(user: &str, question: &str) {
   let url = format!("http://ask.fm/{}", user);
   let mut client = hyper::Client::new();
   let mut response = client.get(&url).send().unwrap();
@@ -40,7 +40,7 @@ fn ask(user: &str, ask: &str) {
   let url = format!("http://ask.fm/{}/questions/create", user);
   let query =
     [("authenticity_token", token),
-     ("question[question_text]", ask),
+     ("question[question_text]", question),
      ("question[force_anonymous]", "force_anonymous")]
     .iter()
     .map(|&(k, v)| format!("{}={}", k, v))
