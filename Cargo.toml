@@ -1,0 +1,13 @@
+[package]
+name = "ezoe"
+version = "0.1.0"
+authors = [ "woxtu <woxtup@gmail.com>" ]
+
+[dependencies]
+hyper = "0.5.0"
+docopt = "*"
+docopt_macros = "*"
+regex = "0.1.8"
+regex_macros = "0.1.17"
+rss = "0.1.0"
+rustc-serialize = "*"
