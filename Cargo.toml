@@ -3,6 +3,9 @@ name = "ezoe"
 version = "0.1.0"
 authors = [ "woxtu <woxtup@gmail.com>" ]
 
+[[bin]]
+name = "ezoe"
+
 [dependencies]
 hyper = "0.5.0"
 docopt = "*"
